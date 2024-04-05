@@ -1,0 +1,6 @@
+{
+    "hostname": "localhost",
+    "username": "user",
+    "password": "password",
+    "database_name": "sample_database.db"
+}
