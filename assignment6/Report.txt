@@ -1,0 +1,30 @@
+First task:
+Design Choices:
+
+Subsystem separation: Dividing responsibilities into BookInventory and UserManagement helps manage complexity and allows independent scaling or modification of each subsystem.
+Facade utility: LibraryFacade provides a simple interface to the subsystems, hiding the complexity of operations like searching and borrowing books, which involves both subsystems.
+Simplifications via Facade:
+
+The facade allows users (developers or end users of an API, for example) to perform complex operations with single method calls, reducing the knowledge required about the inner workings of the library management subsystems.
+It encapsulates user and inventory management, ensuring that changes to implementation details of these subsystems do not affect the code that uses them.
+
+
+
+Second task:
+Explanation of the Code
+Pizza Class: This is the base class representing a basic pizza. It has properties for description and price. The get_price() and get_description() methods return the pizza's price and description, respectively.
+PizzaDecorator Class: This abstract decorator class extends Pizza and takes a Pizza instance as an argument. It delegates the calls to the wrapped Pizza object but allows overriding by subclasses to add functionality.
+PepperoniTopping and MushroomTopping Classes: These classes are concrete decorators that override the get_price() and get_description() methods to add the price and description of their respective toppings.
+Testing: The main section creates a basic pizza and decorates it with pepperoni and mushrooms, demonstrating how the price and description are dynamically adjusted.
+
+
+
+
+
+Third task:
+Explanation of the Code
+WeatherData: This class represents the standardized format in which all weather data will be expressed in the application. It includes temperature in Celsius, humidity in percentage, and wind speed in km/h.
+WeatherAdapter: This is an abstract class that defines the interface for all concrete adapters. It ensures that all adapters implement a get_weather_data method.
+APIAAdapter and APIBAdapter: These are concrete implementations of the WeatherAdapter. They handle the specifics of interacting with external weather APIs (API_A and API_B). APIAAdapter converts the temperature from Fahrenheit to Celsius, while APIBAdapter uses the temperature as provided.
+API_A and API_B: These classes simulate external weather APIs with different data formats. API_A provides temperature in Fahrenheit, which needs conversion, whereas API_B provides data in the format already expected by the app.
+Testing in Main Block: This section creates instances of the APIs and their respective adapters, retrieves weather data through the adapters, and prints it out in a standardized format.

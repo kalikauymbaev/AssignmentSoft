@@ -1,0 +1,4 @@
+First task:
+Simplification: Each handler focuses solely on its area of expertise, leading to clearer, more maintainable code.
+Extensibility: Adding new types of requests or handlers is straightforward and doesn't require changes to existing code.
+Decoupling: Handlers are decoupled from one another, promoting loose coupling and flexibility.
